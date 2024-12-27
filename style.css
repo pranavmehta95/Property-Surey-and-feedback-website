@@ -106,7 +106,7 @@ button:hover, input[type=reset]:hover {
 .Projects {
     width: 100%;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #e6f7ff; /* Light blue background */
     padding: 40px 0;
 }
 h1 {
