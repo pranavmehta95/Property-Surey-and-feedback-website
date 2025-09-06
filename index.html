@@ -1,107 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Property Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Properties - Premium Real Estate</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Assets/Images/logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <a href="index.html"><img src="Assets/Images/logo.png" class="logo"></a>
-            <ul>
-                <li> <a href="Buy.html"><b>Buy</b></a></li>
-                <li> <a href="Rent.html"><b>Rent</b></a></li>
-                <li> <a href="Sell.html"><b>Sell</b></a></li>
-                <li> <a href="Post.html"><b>Post Property for Free</b></a></li>
-                <li> <a href="login.html"><b>Hello/Signup</b></a></li>
-                <li> <a href="Contact.html"><b>Contact us</b></a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Heritage<span class="highlight">Properties</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <form action="">
-            <label for="Location"></label>
-            <select name="location" id="location" required>
-                <option value="">--Location--</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Begnaluru">Bengaluru</option>
-                <option value="Kolkata">Kolkata</option>
-                <option value="Pune">Pune</option>
-            </select>
-            <label for="Property type"></label>
-            <select name="Property type" id="Property type" required>
-                <option value="">--Property type--</option>
-                <option value="1BHK">1BHK</option>
-                <option value="2BHK">2BHK</option>
-                <option value="3BHK">3BHK</option>
-            </select>
-            <label for="Budget"></label>
-            <select name="Budget" id="Budget" required>
-                <option value="">--Budget--</option>
-                <option value="20-30 Lakh">20-30 Lakh</option>
-                <option value="30-45 Lakh">30-45 Lakh</option>
-                <option value="45-70 Lakh">45-70 Lakh</option>
-            </select>
-            <button type="submit">Search</button>
-            <input type="reset" value="Reset">
-        </form>
-        <div class="Projects">
-            <h1>PROJECT GALLERY</h1>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Dream <span class="highlight">Heritage Home</span></h1>
+            <p class="hero-subtitle">Discover premium properties with timeless elegance and modern luxury</p>
+            <div class="hero-buttons">
+                <a href="#properties" class="btn btn-primary">Explore Properties</a>
+                <a href="#contact" class="btn btn-secondary">Get Started</a>
+            </div>
         </div>
-        <div class="gallery">
-            <figure class="content">
-                <img src="Assets/Images/project1.jpg">
-                <figcaption>
-                    <a href="incomplete.html"><h3>View Projects</h3></a>
-                </figcaption>
-            </figure>
-            <figure class="content">
-                <img src="Assets/Images/project2.jpg">
-                <figcaption>
-                    <a href="incomplete.html"><h3>Get Quotation</h3></a>
-                </figcaption>
-            </figure>
-            <figure class="content">
-                <img src="Assets/Images/project3.jpg">
-                <figcaption>
-                    <a href="incomplete.html"><h3>Upcoming Projects</h3></a>
-                </figcaption>
-            </figure>
-            <figure class="content">
-                <img src="Assets/Images/project4.jpg">
-                <figcaption>
-                    <a href="incomplete.html"><h3>EMI Calculator</h3></a>
-                </figcaption>
-            </figure>
+        <div class="search-box">
+            <div class="search-filters">
+                <select class="filter-select">
+                    <option value="">Location</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="pune">Pune</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Property Type</option>
+                    <option value="1bhk">1 BHK</option>
+                    <option value="2bhk">2 BHK</option>
+                    <option value="3bhk">3 BHK</option>
+                    <option value="villa">Villa</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Budget</option>
+                    <option value="20-30">20-30 Lakh</option>
+                    <option value="30-50">30-50 Lakh</option>
+                    <option value="50-1cr">50 Lakh - 1 Cr</option>
+                    <option value="1cr+">1 Cr+</option>
+                </select>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
         </div>
-        <div class="Footer">
-            <h2 class="footer-text">What Makes Us A Preferred Choice</h2>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-subtitle">Handpicked premium properties for discerning buyers</p>
+            </div>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="Luxury Villa">
+                        <div class="property-badge">Featured</div>
+                        <div class="property-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn"><i class="fas fa-heart"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-share"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Luxury Heritage Villa</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> South Delhi</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 BHK</span>
+                            <span><i class="fas fa-bath"></i> 3 Bath</span>
+                            <span><i class="fas fa-car"></i> 2 Parking</span>
+                        </div>
+                        <div class="property-price">₹2.5 Crores</div>
+                        <button class="property-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Modern Apartment">
+                        <div class="property-badge">New</div>
+                        <div class="property-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn"><i class="fas fa-heart"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-share"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Modern Heritage Apartment</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Bandra, Mumbai</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 BHK</span>
+                            <span><i class="fas fa-bath"></i> 2 Bath</span>
+                            <span><i class="fas fa-car"></i> 1 Parking</span>
+                        </div>
+                        <div class="property-price">₹1.8 Crores</div>
+                        <button class="property-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400" alt="Penthouse">
+                        <div class="property-badge">Premium</div>
+                        <div class="property-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn"><i class="fas fa-heart"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-share"></i></button>
+                                <button class="overlay-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Heritage Penthouse</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Koramangala, Bangalore</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 BHK</span>
+                            <span><i class="fas fa-bath"></i> 4 Bath</span>
+                            <span><i class="fas fa-car"></i> 3 Parking</span>
+                        </div>
+                        <div class="property-price">₹3.2 Crores</div>
+                        <button class="property-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bottom-content">
-            <figure class="bot-content">
-                <img src="Assets/Images/list.gif" class="icon1">
-                <figcaption>
-                    <h3>Maximum Choices</h3>
-                </figcaption>
-            </figure>
-            <figure class="bot-content">
-                <img src="Assets/Images/shield.gif" class="icon2">
-                <figcaption>
-                    <h3>Buyer's Trust</h3>
-                </figcaption>
-            </figure>
-            <figure class="bot-content">
-                <img src="Assets/Images/like.gif" class="icon3">
-                <figcaption>
-                    <h3>Seller Prefer Us</h3>
-                </figcaption>
-            </figure>
-            <figure class="bot-content">
-                <img src="Assets/Images/expert.gif" class="icon4">
-                <figcaption>
-                    <h3>Expert Guidance</h3>
-                </figcaption>
-            </figure>   
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive real estate solutions for all your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Buying</h3>
+                    <p>Expert guidance in finding and purchasing your perfect heritage property with complete legal support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Property Selling</h3>
+                    <p>Maximize your property value with our professional selling services and market expertise.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Property Rental</h3>
+                    <p>Complete rental solutions for landlords and tenants with hassle-free management services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Advisory</h3>
+                    <p>Strategic investment advice to help you make informed decisions in the real estate market.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Heritage Properties</h2>
+                    <p>With over 15 years of experience in the real estate industry, Heritage Properties has been a trusted name in premium property solutions. We specialize in heritage and luxury properties that combine timeless elegance with modern amenities.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Properties Sold</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Expert Agents</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to find your dream property? Contact our expert team today</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Our Office</h4>
+                            <p>123 Heritage Street, Premium Plaza, New Delhi - 110001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>info@heritageproperties.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">Your Phone</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Heritage<span class="highlight">Properties</span></h3>
+                    <p>Your trusted partner in finding premium heritage properties with timeless elegance and modern luxury.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Property Buying</a></li>
+                        <li><a href="#">Property Selling</a></li>
+                        <li><a href="#">Property Rental</a></li>
+                        <li><a href="#">Investment Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Heritage Street, New Delhi</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@heritageproperties.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Heritage Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form labels animation
+        const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
